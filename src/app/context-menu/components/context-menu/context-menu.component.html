@@ -1,0 +1,48 @@
+<ul *ngIf="isShown" id="vmenu" style="width:804px; height: 810px; border:6px solid black;">
+
+    <li class="header">Summary </li>
+    <li class="firstlineborder"></li>
+    <li class="two-column">Landscape </li>
+    <li class="firstlineborder"></li>
+    <li class="header">Molecular</li>
+    <li class="firstlineborder"></li>
+    <li class="header">Clinical</li>
+
+
+    <li *ngFor="let item of items" class="{{item.type}}" (click)="selectedItemChanged(item); "
+        [class.active]="item.isSelected">
+        <p></p>
+        <i [class]="item.icon"></i>
+        <p></p>
+        {{item.name}}
+    </li>
+
+
+
+</ul>
+
+<dl *ngIf="isShown" id="infomenu" style="width:300px; height:813px; border:6px solid black;">
+    <div class="blank">
+        <dt>{{selectedItemDescribe}}</dt>
+        <dt *ngIf="isSelectedItem">{{selectedItemName}} Confirmed。</dt>
+        <dt>dawd adw awd ad add a rehtrerh rrhrh</dt>
+        <dt>herthrehreh rethrh rther hhre re </dt>
+        <dt>fvefes fdv e ew/dt>
+        <dt>d ew re rewg ewrg erwg </dt>
+        <dt>dawd adw awd ad add a rehtrerh rrhrh</dt>
+        <dt>herthrehreh rethrh rther hhre re </dt>
+        <dt>fvefes fdv e ew/dt>
+        <dt>d ew re rewg ewrg erwg </dt>
+        <dt>dawd adw awd ad add a rehtrerh rrhrh</dt>
+        <dt>herthrehreh rethrh rther hhre re </dt>
+        <dt>fvefes fdv e ew/dt>
+        <dt>d ew re rewg ewrg erwg </dt>
+        <dt>s</dt>
+        <dt>s</dt>
+        <dt>saafwf</dt>
+        <dt>eserwgw</dt>
+        <dt>ewrgwe</dt>
+    </div>
+    <li class="Cancel" (click)="Cancel()">Cancel</li>
+    <li class="Select" (click)="confirmed()">Select</li>
+</dl>
