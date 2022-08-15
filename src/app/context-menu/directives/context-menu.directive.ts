@@ -28,6 +28,7 @@ export class ContextMenuDirective {
     const componentFac = this.componentFactoryResolver.resolveComponentFactory(ContextMenuComponent)
     this.component = this.viewContainerRef.createComponent(componentFac);
     this.component.instance.items = this.appContextMenu;
+    //todo
     this.component.instance.isShown = true;
   }
 }
